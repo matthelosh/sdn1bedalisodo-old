@@ -14,7 +14,7 @@
             html, body {
                 background-image: url("{{ url('img/bg.jpg') }}");
                 background-size: cover;
-                background-repeat: no-repeat: 
+                background-repeat: no-repeat:
                 background-color: #fff;
                 color: #333;
                 font-family: 'Nunito', sans-serif;
@@ -71,7 +71,7 @@
     </head>
     <body>
         <div class="position-ref full-height">
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -83,21 +83,22 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
             <div class="content">
-                <div class="title m-b-md" style="text-decoration: underline;">
+                <div class="title m-b-md" style="text-decoration: underline; font-size: 3rem;padding-top: 20px;">
                    SD Negeri 1 Bedalisodo
                 </div>
 
                 <div class="links">
-                    <a href="/siswa">Menu Siswa</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/profil">Profil</a>
+                    <a href="/guru">Guru</a>
+                    <a href="/siswa-publik">Siswa</a>
+                    <a href="/fasilitas">Fasilitas</a>
+                    <a href="/ekstrakurikuler">Ekskul</a>
+                    <a href="/galeri">Galeri</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/login">login</a>
                 </div>
             </div>
         </div>
