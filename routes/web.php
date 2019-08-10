@@ -35,3 +35,33 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/adm-guru', 'GuruController@indexAdm')->name('admguru');
 Route::post('/adm-guru/import', 'GuruController@import')->name('importguru');
 Route::post('/adm-guru/create', 'GuruController@create')->name('createguru');
+// Mapel
+Route::post('/adm-mapel/import', 'MapelController@import')->name('importmapel');
+Route::get('/adm-mapel', 'MapelController@indexAdm')->name('admmapel');
+// Ekskul
+Route::get('/adm-ekskul', 'EkskulController@indexAdm')->name('admekskul');
+Route::post('/adm-ekskul/import', 'EkskulController@import')->name('importekskul');
+// KOmpetensi Inti
+Route::get('/adm-ki', 'KiController@indexAdm')->name('adminki');
+Route::post('/adm-ki/import', 'KiController@import')->name('importki');
+
+// Kompetensi Dasar
+Route::get('/adm-kd', 'KdController@indexAdm')->name('adminkd');
+Route::get('/adm-kd/showdata', 'KdController@showData')->name('showdatakd');
+Route::post('/adm-kd/import', 'KdController@import')->name('importkd');
+// Rombel
+Route::get('/adm-rombel', 'RombelController@indexAdm')->name('adminrombel');
+Route::post('adm-rombel/import', 'RombelController@import')->name('importrombel');
+// Siswa
+Route::get('/adm-siswa', 'SiswaController@indexAdm')->name('adminsiswa');
+Route::get('/adm-siswa/showdata', 'SiswaController@showData')->name('showdatasiswa');
+Route::post('/adm-siswa/create', 'SiswaController@create')->name('createsiswa');
+// General Settings
+    // Tapel
+Route::get('/adm-tapel', 'TapelController@indexAdm')->name('admintapel');
+
+    // Semester
+Route::get('/adm-semester', 'SemesterController@indexAdm')->name('adminsemester');
+
+    // Tingkat / Kelas
+Route::get('/adm-tingkat', 'TingkatController@indexAdm')->name('admintingkat');
