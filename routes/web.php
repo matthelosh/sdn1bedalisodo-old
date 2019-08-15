@@ -52,10 +52,15 @@ Route::post('/adm-kd/import', 'KdController@import')->name('importkd');
 // Rombel
 Route::get('/adm-rombel', 'RombelController@indexAdm')->name('adminrombel');
 Route::post('adm-rombel/import', 'RombelController@import')->name('importrombel');
+Route::get('/adm-rombel/showdata', 'RombelController@showData')->name('showdatarombel');
+Route::post('/adm-rombel/getmembership', 'SiswaController@getMembership')->name('getmembers');
 // Siswa
 Route::get('/adm-siswa', 'SiswaController@indexAdm')->name('adminsiswa');
 Route::get('/adm-siswa/showdata', 'SiswaController@showData')->name('showdatasiswa');
 Route::post('/adm-siswa/create', 'SiswaController@create')->name('createsiswa');
+// oRTU
+Route::post('/adm-ortu/add-ortu', 'OrtuController@create')->name('createortu');
+Route::put('/adm-ortu/edit-ortu', 'OrtuController@update')->name('updateortu');
 // General Settings
     // Tapel
 Route::get('/adm-tapel', 'TapelController@indexAdm')->name('admintapel');
@@ -65,3 +70,9 @@ Route::get('/adm-semester', 'SemesterController@indexAdm')->name('adminsemester'
 
     // Tingkat / Kelas
 Route::get('/adm-tingkat', 'TingkatController@indexAdm')->name('admintingkat');
+    // Users
+Route::get('/adm-users', 'UserController@index')->name('adminusers');
+Route::post('/adm-users/import', 'UserController@import')->name('importusers');
+
+    // Route guru
+Route::get('/guru/nilai', 'NilaiController@index')->name('indexNilai');
