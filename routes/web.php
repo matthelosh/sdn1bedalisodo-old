@@ -53,7 +53,12 @@ Route::post('/adm-kd/import', 'KdController@import')->name('importkd');
 Route::get('/adm-rombel', 'RombelController@indexAdm')->name('adminrombel');
 Route::post('adm-rombel/import', 'RombelController@import')->name('importrombel');
 Route::get('/adm-rombel/showdata', 'RombelController@showData')->name('showdatarombel');
-Route::post('/adm-rombel/getmembership', 'SiswaController@getMembership')->name('getmembers');
+Route::get('/adm-rombel/get-members', 'SiswaController@getMembers')->name('getmembers');
+Route::get('/adm-rombel/get-nonmembers', 'SiswaController@getNonMembers')->name('getnonmembers');
+Route::get('/adm-rombel/cari', 'RombelController@cari')->name('carirombel');
+Route::put('/adm-rombel/pindah-siswa', 'SiswaController@pindahRombel')->name('pindahrombel');
+Route::put('/adm-rombel/keluarkan-siswa', 'SiswaController@keluarkanSiswa')->name('keluarkansiswa');
+Route::put('/adm-rombel/masukkan-siswa', 'SiswaController@masukkanSiswa')->name('masukkanSiswa');
 // Siswa
 Route::get('/adm-siswa', 'SiswaController@indexAdm')->name('adminsiswa');
 Route::get('/adm-siswa/showdata', 'SiswaController@showData')->name('showdatasiswa');
