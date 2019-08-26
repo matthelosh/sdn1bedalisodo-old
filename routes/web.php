@@ -81,3 +81,14 @@ Route::post('/adm-users/import', 'UserController@import')->name('importusers');
 
     // Route guru
 Route::get('/guru/nilai', 'NilaiController@index')->name('indexNilai');
+Route::get('/guru/nilaisiswa', 'NilaiController@getNilaiByGuru')->name('nilaibyguru');
+Route::get('/adm-nilai/cari-kd', 'KdController@cari')->name('carikd');
+Route::get('/guru/siswas', 'SiswaController@indexFromGuru')->name('indexsiswa');
+Route::get('/guru/show-mysiswa', 'SiswaController@showMySiswa')->name('showmysiswa');
+
+// Globals
+    // get Tapels
+Route::get('/tapels', 'TapelController@index')->name('gettapels');
+Route::get('/tapels/id/{kode_tapel}', 'TapelController@getByKode')->name('getbykode');
+Route::get('/cari/mapel', 'MapelController@cari')->name('carimapel');
+Route::get('/cari/kd', 'KdController@cari')->name('carikd');
